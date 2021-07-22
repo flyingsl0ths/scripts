@@ -1,19 +1,19 @@
 # Scratch-pad
 
-**Scratch file**
+**What is a scratch file?**
 
 A (potential) one time use file that serves
 as a template for whatever file extension given
+
+**Description**
 
  A simple script for creating _scratch-pad_ files
 of whatever file extension is found in the
 **$HOME/templates** directory
 
-
-
 **Installation**
 
-run
+Run
 
 ``` bash
 chmod +x install.sh
@@ -24,4 +24,3 @@ chmod -x install.sh
 
 # and your done!
 ```
-
