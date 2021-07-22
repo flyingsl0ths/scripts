@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+KEEP_FILE="-k"
+MAKE_SCRATCH_FILE="-s"
+SHOW_HELP="-h"
+
 found_template_file=0
 file_name="main"
 
@@ -52,10 +56,6 @@ function help_message() {
 }
 
 function main() {
-    KEEP_FILE="-k"
-    MAKE_SCRATCH_FILE="-s"
-    SHOW_HELP="-h"
-
     ACTION="$1"
 
     FILE_EXTN="$2"
