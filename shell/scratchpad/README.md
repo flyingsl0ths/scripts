@@ -18,6 +18,8 @@ chmod +x install.sh
 
 ./install.sh
 
+chmod -x install.sh
+
 # and your done!
 ```
 
