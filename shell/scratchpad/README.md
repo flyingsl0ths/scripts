@@ -1,6 +1,7 @@
 # Scratch-pad
 
 **Scratch file**
+
 A (potential) one time use file that serves
 as a template for whatever file extension given
 
@@ -11,6 +12,7 @@ of whatever file extension is found in the
 
 
 **Installation**
+
 run
 
 ``` bash
