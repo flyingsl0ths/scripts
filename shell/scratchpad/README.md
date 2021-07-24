@@ -7,7 +7,7 @@ as a template for whatever file extension given
 
 **Description**
 
- A simple script for creating _scratch-pad_ files
+ A simple script for creating _scratch_ files
 of whatever file extension is found in the
 **$HOME/templates** directory
 
