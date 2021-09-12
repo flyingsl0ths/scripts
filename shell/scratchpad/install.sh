@@ -4,17 +4,26 @@ SCRIPT_NAME="scratchpad"
 
 TEMPLATES_DIR="templates"
 
-INSTALL_SCRIPT_CWD=$(pwd)
-INSTALL_DIRECTORY=".bin"
+BIN_DIRECTORY=".bin"
 
-echo "Locating $HOME/$INSTALL_DIRECTORY..."
+INSTALL_DIRECTORY="$HOME/$BIN_DIRECTORY"
 
-cd "$HOME/$INSTALL_DIRECTORY" || (echo "$HOME/$INSTALL_DIRECTORY not found exiting..." && exit)
+install_script() {
+  cp "$SCRIPT_NAME.sh" "$INSTALL_DIRECTORY/$SCRIPT_NAME"
 
-echo "Found $INSTALL_DIRECTORY/"
+  chmod +x "$INSTALL_DIRECTORY/$SCRIPT_NAME"
 
-echo "Creating symlinks in $HOME/$INSTALL_DIRECTORY  && $HOME"
-ln -s "$INSTALL_SCRIPT_CWD/$SCRIPT_NAME" .
-ln -s "$INSTALL_SCRIPT_CWD/$TEMPLATES_DIR" "$HOME"
+  ln -s "$(pwd)/$TEMPLATES_DIR" "$HOME"
+}
+
+echo "Locating $HOME/$BIN_DIRECTORY..."
+
+[ -d "$HOME/$BIN_DIRECTORY" ] || (echo "$HOME/$BIN_DIRECTORY not found exiting..." && exit)
+
+echo "Found $BIN_DIRECTORY/"
+
+echo "Installing script and templates directory"
+
+install_script
 
 echo "$SCRIPT_NAME installed!"
