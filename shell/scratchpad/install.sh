@@ -4,7 +4,7 @@ SCRIPT_NAME="scratchpad"
 
 TEMPLATES_DIR="templates"
 
-BIN_DIRECTORY=".bin"
+BIN_DIRECTORY=".local/bin"
 
 INSTALL_DIRECTORY="$HOME/$BIN_DIRECTORY"
 

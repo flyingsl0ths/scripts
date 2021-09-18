@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BIN_DIRECTORY="$HOME/.bin"
+BIN_DIRECTORY="$HOME/.local/bin"
 
 install_scripts() {
   cd scripts || exit
