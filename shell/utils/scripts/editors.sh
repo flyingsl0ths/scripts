@@ -21,9 +21,6 @@ launch_editor() {
     "${EDITORS[4]}")
         typora &
         ;;
-    *)
-        echo "Unsupported editor"
-        ;;
     esac
 }
 
