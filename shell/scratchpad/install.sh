@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 SCRIPT_NAME="scratchpad"
 
@@ -9,11 +9,11 @@ BIN_DIRECTORY=".local/bin"
 INSTALL_DIRECTORY="$HOME/$BIN_DIRECTORY"
 
 install_script() {
-  cp "$SCRIPT_NAME.sh" "$INSTALL_DIRECTORY/$SCRIPT_NAME"
+    cp "$SCRIPT_NAME.sh" "$INSTALL_DIRECTORY/$SCRIPT_NAME"
 
-  chmod +x "$INSTALL_DIRECTORY/$SCRIPT_NAME"
+    chmod +x "$INSTALL_DIRECTORY/$SCRIPT_NAME"
 
-  ln -s "$(pwd)/$TEMPLATES_DIR" "$HOME"
+    ln -s "$(pwd)/$TEMPLATES_DIR" "$HOME"
 }
 
 echo "Locating $HOME/$BIN_DIRECTORY..."

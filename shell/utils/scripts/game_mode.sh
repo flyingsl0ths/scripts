@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 game_mode() {
-  PROGRAM="$1"
+    PROGRAM="$1"
 
-  gamemoderun "$PROGRAM"
+    gamemoderun "$PROGRAM"
 
-  kill "$(pgrep gamemoded)"
+    kill "$(pgrep gamemoded)"
 }
 
 game_mode "$1"

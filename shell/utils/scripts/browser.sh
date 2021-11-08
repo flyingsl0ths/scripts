@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 launch_browser() {
     pgrep searx-run

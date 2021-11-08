@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/env bash
 
 KEEP_FILE="-k"
 MAKE_SCRATCH_FILE="-s"
@@ -7,7 +7,7 @@ SHOW_HELP="-h"
 found_template_file=0
 file_name="scratchpad"
 
-function get_main_file() {
+get_main_file() {
     TEMPLATES_DIR="$HOME/templates"
 
     TEMPLATE_FILES=$(ls "$TEMPLATES_DIR")
@@ -22,7 +22,7 @@ function get_main_file() {
     done
 }
 
-function create_scratch_file() {
+create_scratch_file() {
     cwd=$(pwd)
 
     file_path="$cwd/$file_name"
@@ -36,7 +36,7 @@ function create_scratch_file() {
     fi
 }
 
-function launch_editor() {
+launch_editor() {
     FILE="$1"
 
     if [ "$EDITOR" = "" ]; then
@@ -46,7 +46,7 @@ function launch_editor() {
     "$EDITOR" "$FILE"
 }
 
-function open_file() {
+open_file() {
     if [ "$1" = "$MAKE_SCRATCH_FILE" ]; then
         launch_editor "$file_path" && rm "$file_path"
     else
@@ -54,7 +54,7 @@ function open_file() {
     fi
 }
 
-function help_message() {
+help_message() {
     echo "   'scratch file':
     A (potential) one time use file that serves
     as a template for whatever file extension given
@@ -65,7 +65,7 @@ function help_message() {
     "
 }
 
-function main() {
+main() {
     ACTION="$1"
 
     FILE_EXTN="$2"
